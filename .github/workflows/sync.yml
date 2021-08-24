@@ -1,0 +1,28 @@
+# File: .github/workflows/repo-sync.yml
+
+name: Sync Files
+on:
+  push:
+    branches:
+      - master
+      - PROD-KDU-Curec
+    paths-ignore:
+      - sync.yml
+      - ^CNAME$
+      - CNAME
+  workflow_dispatch:
+
+jobs:
+  git-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: HELLIXIT/git-sync@master
+        with:
+          source_repo: "HELLIXIT/KDU-Curec-DEV"
+          source_branch: "PROD-KDU-Curec"
+          destination_repo: "HELLIXIT/KDU-Curec-PROD"
+          destination_branch: "PROD-KDU-Curec"
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # optional
+          #source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
+          #destination_ssh_private_key: ${{ secrets.DESTINATION_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
