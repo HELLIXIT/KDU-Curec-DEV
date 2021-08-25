@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.theme.css">
   <link rel="stylesheet" href="assets/datepicker/jquery.datetimepicker.min.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/recaptcha.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
@@ -172,31 +171,61 @@
                         <h3 class="form_title mbr-fonts-style display-5">
                             <strong>Sign Up</strong>
                         </h3>
-                        <div class="mbr-form" data-form-type="formoid">
+                        <div class="mbr-form">
 <!--Formbuilder Form-->
-<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="SignUp"><input type="hidden" name="email" data-form-email="true" value="1zIQw71XHl3Qqrwe7g0COfeev3zVt20KXSdgl54l0zsA7JV14z1lHvN7mIVOPvbAgxhVSg0E54LNlAVq9Qk/3CDygKtdlyUZBmm+WjVGflgJsEWUkTbX2wJQ/7aW6Six.XUnJG+j5bkeUjxyI7jtvG/hhkH/i263SAlT7leBz7yE7wFus6gnHkrFoJl8Lq1vd/LMgamd+5O5H89V1HYl4mwD5hGNy+A1Nvh9efaL2EF1pmyzJWaP7F5LwW/b6/34x">
+<form action="http://localhost/curec/Curec-COVID19Assistant-master/access/dbClass.php" method="POST" class="mbr-form form-with-styler mx-auto">
 <div class="">
-<div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+
 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
 </div>
 <div class="dragArea">
 <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="name">
-<input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control display-7" value="" id="name-form3-w">
+<label for="name-form3-w" class="form-control-label mbr-fonts-style display-7">Name</label>
+<input type="text" name="name" placeholder="Nimesh Ekanayake" data-form-field="name" required="required" class="form-control display-7" value="" id="name-form3-w">
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="email">
-<input type="email" name="email" placeholder="Email Address" data-form-field="email" class="form-control display-7" value="" id="email-form3-w">
+<div class="col form-group" data-for="contactnumber">
+<label for="contactnumber-form3-w" class="form-control-label mbr-fonts-style display-7">Contact Number</label>
+<input type="text" name="contactnumber" placeholder="0712345678" data-form-field="contactnumber" required="required" class="form-control display-7" value="" id="contactnumber-form3-w">
+</div>
+<div data-for="bloodgroup" class="col form-group">
+<label for="bloodgroup-form3-w" class="form-control-label mbr-fonts-style display-7">Blood Group</label>
+<select name="bloodgroup" data-form-field="bloodgroup" class="form-control display-7" id="bloodgroup-form3-w">
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>
+</div>
+<div data-for="hometown" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label for="hometown-form3-w" class="form-control-label mbr-fonts-style display-7">Hometown</label>
+<input type="text" name="hometown" placeholder="Colombo" data-form-field="hometown" class="form-control display-7" required="required" value="" id="hometown-form3-w">
+</div>
+<div data-for="mohoffice" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label for="mohoffice-form3-w" class="form-control-label mbr-fonts-style display-7">MOH Office</label>
+<select name="mohoffice" data-form-field="mohoffice" class="form-control display-7" id="mohoffice-form3-w">
+<option value="Colombo">Colombo</option>
+<option value="Homagama">Homagama</option>
+<option value="Negombo">Negombo</option>
+</select>
 </div>
 <div data-for="nic" class="col-lg-12 col-md-12 col-sm-12 form-group">
-<input type="text" name="nic" placeholder="NIC" data-form-field="nic" class="form-control display-7" value="" id="nic-form3-w">
+<label for="nic-form3-w" class="form-control-label mbr-fonts-style display-7">NIC Number</label>
+<input type="text" name="nic" placeholder="922120700v" data-form-field="nic" required="required" class="form-control display-7" value="" id="nic-form3-w">
 </div>
-<div data-for="password" class="col-auto form-group">
-<input type="password" name="password" placeholder="Password" data-form-field="password" class="form-control display-7" required="required" value="" id="password-form3-w">
+<div class="col-auto form-group" data-for="password">
+<label for="password-form3-w" class="form-control-label mbr-fonts-style display-7">Password</label>
+<input type="password" name="password" placeholder="**********" data-form-field="password" required="required" class="form-control display-7" value="" id="password-form3-w">
 </div>
-<div data-for="confirmpassword" class="col-lg-12 col-md-12 col-sm-12 form-group">
-<input type="password" name="confirmpassword" placeholder="Confirm Password" data-form-field="confirmpassword" class="form-control display-7" required="required" value="" id="confirmpassword-form3-w">
+<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="confpassword">
+<label for="confpassword-form3-w" class="form-control-label mbr-fonts-style display-7">Confirm Password</label>
+<input type="password" name="confpassword" placeholder="**********" data-form-field="confpassword" class="form-control display-7" required="required" value="" id="confpassword-form3-w">
 </div>
 <div class="col-auto col-lg-4 col-sm-6 mbr-section-btn align-center">
-<button type="submit" class="btn btn-sm btn-primary display-4">Sign Up</button>
+<button type="submit" class="btn btn-sm btn-primary display-4" name="signup">Sign Up</button>
 </div>
 </div>
 </form><!--Formbuilder Form-->
@@ -356,7 +385,6 @@
   <script src="assets/formstyler/jquery.formstyler.min.js"></script>
   <script src="assets/datepicker/jquery.datetimepicker.full.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid.min.js"></script>
   
   
   
