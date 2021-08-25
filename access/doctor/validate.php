@@ -1,5 +1,5 @@
 <?php
-require_once 'system/dbConn.php';
+require_once '../d_b_connect.php';
 
 if(isset($_POST['logIn']))
 	{

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/FontAwesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/icon54-v4/style.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -23,8 +24,8 @@
   <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.css">
   <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.theme.css">
   <link rel="stylesheet" href="assets/datepicker/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/recaptcha.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
@@ -138,11 +139,11 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 mx-auto mbr-form" data-form-type="formoid">
+            <div class="col-lg-12 mx-auto mbr-form">
 <!--Formbuilder Form-->
-<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="MCJaeE7uRd6lBkHdBT5OzVo4eRgGpQoVXAbcLKXXxUsrmZTzNmpV7+M6jC6UzQ343CTHFTn3q8GcAPk4uc3ahz4Ov0ORtMNsKlBCjDaX1jqxI0soHQyXNa1txsVhXzvf.vC4rBhRU3fBeWthMi+56KLA14rzMDfoU0DYgdUtuMAS2zKwJoG/7TX/eDbdCboyzOQk6Ty22P9QyMBUMvZs0YeYPhhuVi4d0W/uG5WNCBGcrtG2ktOlyIeg+wdzbG6XN">
+<form action="./access/dbClass.php" method="POST" class="mbr-form form-with-styler">
 <div class="form-row">
-<div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+
 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
 </div>
 <div class="dragArea form-row">
@@ -151,6 +152,10 @@
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="text">
 <input type="text" name="text" placeholder="Name" data-form-field="text" class="form-control display-7" value="" id="text-form02-13">
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
+<p class="mbr-fonts-style display-7">
+</p>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12">
 <h5 class="mbr-fonts-style display-5">Basic Symptoms</h5>
@@ -169,21 +174,21 @@
 <option value="Yes">Yes</option>
 </select>
 </div>
-<div data-for="sorethroat" class="col-lg-3 col-md-12 col-sm-12 form-group">
+<div class="col-lg-3 col-md-12 col-sm-12 form-group" data-for="sorethroat">
 <label for="sorethroat-form02-13" class="form-control-label mbr-fonts-style display-7">Sore Throat</label>
 <select name="sorethroat" data-form-field="sorethroat" class="form-control display-7" id="sorethroat-form02-13">
 <option value="No">No</option>
 <option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-3 col-md-12 col-sm-12 form-group" data-for="cold">
+<div data-for="cold" class="col-lg-3 col-md-12 col-sm-12 form-group">
 <label for="cold-form02-13" class="form-control-label mbr-fonts-style display-7">Cold</label>
 <select name="cold" data-form-field="cold" class="form-control display-7" id="cold-form02-13">
 <option value="No">No</option>
 <option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-6 col-md-12 col-sm-12 form-group" data-for="difficultyinbreathing" style="">
+<div data-for="difficultyinbreathing" class="col-lg-6 col-md-12 col-sm-12 form-group">
 <label for="difficultyinbreathing-form02-13" class="form-control-label mbr-fonts-style display-7">Difficulty in Breathing</label>
 <select name="difficultyinbreathing" data-form-field="difficultyinbreathing" class="form-control display-7" id="difficultyinbreathing-form02-13">
 <option value="No">No</option>
@@ -219,30 +224,34 @@
 </select>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12">
+<p class="mbr-fonts-style display-7">
+</p>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
 <h5 class="mbr-fonts-style display-5">Consider the time period 14 days prior to filling this section</h5>
 </div>
-<div class="col-lg-6 col-md-12 col-sm-12 form-group" data-for="travelabroad">
+<div data-for="travelabroad" class="col-lg-6 col-md-12 col-sm-12 form-group">
 <label for="travelabroad-form02-13" class="form-control-label mbr-fonts-style display-7">Did you traveled abroad?</label>
 <select name="travelabroad" data-form-field="travelabroad" class="form-control display-7" id="travelabroad-form02-13">
 <option value="No">No</option>
 <option value="Yes">Yes</option>
 </select>
 </div>
-<div data-for="date" class="col-lg-6 col-md-12 col-sm-12 form-group">
-<label for="date-form02-13" class="form-control-label mbr-fonts-style display-7">If Yes, Date of Return</label>
-<input type="date" name="date" data-form-field="date" class="form-control display-7" value="2018-07-22" id="date-form02-13">
+<div data-for="traveldate" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label for="traveldate-form02-13" class="form-control-label mbr-fonts-style display-7">If Yes, Date of Return</label>
+<input type="date" name="traveldate" data-form-field="traveldate" class="form-control display-7" value="2018-07-22" id="traveldate-form02-13">
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12">
 <h6 class="mbr-fonts-style display-5">Have you come in contact with..</h6>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="covid19patient">
+<div data-for="covid19patient" class="col-lg-12 col-md-12 col-sm-12 form-group">
 <label for="covid19patient-form02-13" class="form-control-label mbr-fonts-style display-7">A COVID-19 patient/ A patient suspected to have COVID-19</label>
 <select name="covid19patient" data-form-field="covid19patient" class="form-control display-7" id="covid19patient-form02-13">
 <option value="No">No</option>
 <option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-6 col-md-12 col-sm-12 form-group" data-for="comefromabroad" style="">
+<div data-for="comefromabroad" class="col-lg-6 col-md-12 col-sm-12 form-group">
 <label for="comefromabroad-form02-13" class="form-control-label mbr-fonts-style display-7">A person who came from abroad</label>
 <select name="comefromabroad" data-form-field="comefromabroad" class="form-control display-7" id="comefromabroad-form02-13">
 <option value="No">No</option>
@@ -271,165 +280,53 @@
 </select>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12">
+<p class="mbr-fonts-style display-7">
+</p>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12">
 <h5 class="mbr-fonts-style display-5">We're almost done...</h5>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="select">
-<label for="select-form02-13" class="form-control-label mbr-fonts-style display-7">Select</label>
-<select name="select" data-form-field="select" class="form-control display-7" id="select-form02-13">
-<option value="Select">Select</option>
-<option value="Second">Second</option>
+<div data-for="heartdisease" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label for="heartdisease-form02-13" class="form-control-label mbr-fonts-style display-7">Heart Diseases</label>
+<select name="heartdisease" data-form-field="heartdisease" class="form-control display-7" id="heartdisease-form02-13">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="select1">
-<label for="select1-form02-13" class="form-control-label mbr-fonts-style display-7">Select</label>
-<select name="select1" data-form-field="select1" class="form-control display-7" id="select1-form02-13">
-<option value="Select">Select</option>
-<option value="Second">Second</option>
+<div data-for="bloodpressure" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label for="bloodpressure-form02-13" class="form-control-label mbr-fonts-style display-7">High Blood Pressure</label>
+<select name="bloodpressure" data-form-field="bloodpressure" class="form-control display-7" id="bloodpressure-form02-13">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="select2">
-<label for="select2-form02-13" class="form-control-label mbr-fonts-style display-7">Select</label>
-<select name="select2" data-form-field="select2" class="form-control display-7" id="select2-form02-13">
-<option value="Select">Select</option>
-<option value="Second">Second</option>
+<div data-for="diabetes" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label for="diabetes-form02-13" class="form-control-label mbr-fonts-style display-7">Diabetes</label>
+<select name="diabetes" data-form-field="diabetes" class="form-control display-7" id="diabetes-form02-13">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="select3">
-<label for="select3-form02-13" class="form-control-label mbr-fonts-style display-7">Select</label>
-<select name="select3" data-form-field="select3" class="form-control display-7" id="select3-form02-13">
-<option value="Select">Select</option>
-<option value="Second">Second</option>
+<div data-for="lungdisease" class="col-lg-6 col-md-12 col-sm-12 form-group">
+<label for="lungdisease-form02-13" class="form-control-label mbr-fonts-style display-7">Lung Diseases</label>
+<select name="lungdisease" data-form-field="lungdisease" class="form-control display-7" id="lungdisease-form02-13">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
 </select>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="select4">
-<label for="select4-form02-13" class="form-control-label mbr-fonts-style display-7">Select</label>
-<select name="select4" data-form-field="select4" class="form-control display-7" id="select4-form02-13">
-<option value="Select">Select</option>
-<option value="Second">Second</option>
+<div data-for="otherdiseases" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label for="otherdiseases-form02-13" class="form-control-label mbr-fonts-style display-7">Other Diseases</label>
+<select name="otherdiseases" data-form-field="otherdiseases" class="form-control display-7" id="otherdiseases-form02-13">
+<option value="No">No</option>
+<option value="Yes">Yes</option>
 </select>
 </div>
 <div class="col-auto">
-<button type="submit" class="btn btn-warning display-4">SUBMIT</button>
+<button type="submit" class="btn btn-warning display-4" name="assess">SUBMIT</button>
 </div>
 </div>
 </form><!--Formbuilder Form-->
 </div>
-        </div>
-    </div>
-</section>
-
-<section class="footer1 cid-sH04QrRtgT" id="footer1-b">
-
-    
-
-    
-    <div class="container">
-        <div class="media-container-row content text-white">
-
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">
-                    ABOUT US</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
-                </div>
-                <p class="mbr-text mbr-normal mbr-fonts-style display-4">
-                    Contrary to popular belief, Lorem simply random text. It has roots in a piece of classical Latin
-                    literature.</p>
-                <div class="item">
-                    <div class="card-img"><span class="mbr-iconfont img1 mobi-mbri-map-pin mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="item-title align-left mbr-fonts-style display-4">Address: 7654 Street Name</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card-img"><span class="mbr-iconfont img1 mdi-communication-phone"></span></div>
-                    <div class="card-box">
-                        <h4 class="item-title align-left mbr-fonts-style display-4">Phone: +(999) 5554432</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card-img"><span class="mbr-iconfont img1 mobi-mbri-letter mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="item-title align-left mbr-fonts-style display-4">
-                            Email: ex@yourmail.com</h4>
-                    </div>
-                </div>
-                
-                
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">Internal Login</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
-                </div>
-
-                <div class="link">
-                    <div class="card-img"><span class="mbr-iconfont img2 mobi-mbri-arrow-next mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="link-title align-left mbr-fonts-style display-4">Doctor</h4>
-                    </div>
-                </div>
-                <div class="link">
-                    <div class="card-img"><span class="mbr-iconfont img2 mobi-mbri-arrow-next mobi-mbri"></span></div>
-                    <div class="card-box">
-                        <h4 class="link-title align-left mbr-fonts-style display-4">Administration</h4>
-                    </div>
-                </div>
-                <div class="link">
-                    <div class="card-img"><span class="mbr-iconfont img2 mobi-mbri-arrow-next mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="link-title align-left mbr-fonts-style display-4">Security Services</h4>
-                    </div>
-                </div>
-
-                
-
-                
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">
-                    LATEST POSTS</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
-                </div>
-                <div class="list">
-                    <div class="list-item d-flex">
-                        <img class="tips" src="assets/images/01.jpg" alt="">
-                        <div class="content d-flex flex-column justify-content-center">
-                            <h4 class="link-wrap mbr-fonts-style display-4">HEALTHCARE ALLIANCE</h4>
-                            <h4 class="date-wrap mbr-fonts-style display-4">Marhc 25, 2025</h4>
-                        </div>
-                    </div>
-                    <div class="list-item d-flex">
-                        <img class="tips" src="assets/images/02.jpg" alt="">
-                        <div class="content d-flex flex-column justify-content-center">
-                            <h4 class="link-wrap mbr-fonts-style display-4">FIND CLINIC</h4><h4 class="date-wrap mbr-fonts-style display-4">March 21, 2025
-                                </h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">
-                    OPENING HOURS</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
-                </div>
-                <div class="box-list mbr-fonts-style display-4">
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                <li class="clearfix">Mon - Tue<span>11.10 - 19.10</span></li><li class="clearfix">Wed - Thur<span>09.40 - 16.40</span></li><li class="clearfix">Fri - Sat<span>11.20 - 20.20</span></li><li class="clearfix">Sat-Sun<span>10.00 - 12.30</span></li></div>
-            </div>
         </div>
     </div>
 </section>
@@ -453,6 +350,112 @@
     </div>
 </section>
 
+<section class="footer2 solutionm4_footer2 cid-sH5P2k12HK" once="footers" id="footer2-16">
+    
+    
+    <div class="container">
+        <div class="row align-left">
+            <div class="col-md-6 col-lg-3">
+                <h3 class="title pb-2 align-left mbr-bold mbr-fonts-style display-2">SolutionM4</h3>
+                <p class="mbr-text align-left mbr-white mbr-regular mbr-fonts-style display-7">© Copyright 2021 HELLXI IT - All Rights Reserved<br></p>
+                <div class="socicon-wrap">
+                    <span class="mbr-iconfont socicon-twitter socicon"></span>
+                    <span class="mbr-iconfont socicon-instagram socicon"></span>
+                    <span class="mbr-iconfont socicon-youtube socicon"></span>
+                    <span class="mbr-iconfont socicon-instagram socicon"></span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="align-wrap">
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">
+                                Home<br></p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Products</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Services</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Pricing</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Help</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="align-wrap">
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">
+                                Ideas &amp; Plans<br></p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Prompt Strategies</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Content Composing</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Design &amp; Development</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Creative Direction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 align-center col-lg-3">
+
+                <div class="list-items pb-4">
+                    <div class="item mbr-flex">
+                        <span class="item-icon mobi-mbri-phone mobi-mbri"></span>
+                        <p class="item-text mbr-regular mbr-white mbr-fonts-style display-7">+213 632 435</p>
+                    </div>
+
+                    <div class="item mbr-flex">
+                        <span class="item-icon mobi-mbri-letter mobi-mbri"></span>
+                        <p class="item-text mbr-regular mbr-white mbr-fonts-style display-7"> info@yoursite.com</p>
+
+                    </div>
+
+                    <div class="item mbr-flex">
+                        <span class="item-icon mobi-mbri-map-pin mobi-mbri"></span>
+                        <p class="item-text mbr-regular mbr-white mbr-fonts-style display-7">Office 3, Street 54</p>
+
+                    </div>
+
+                    
+
+                    
+                </div>
+                <div class="mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="internallogin.html#features04-1c"><span class="icon54-v4-login mbr-iconfont mbr-iconfont-btn"></span>INTERNAL LOGIN</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
@@ -466,7 +469,6 @@
   <script src="assets/formstyler/jquery.formstyler.min.js"></script>
   <script src="assets/datepicker/jquery.datetimepicker.full.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid.min.js"></script>
   
   
   

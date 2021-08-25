@@ -87,13 +87,15 @@
 	//Saved Color Code
 	$colorCode = "noColor";
 	$result = $conn->query("SELECT Comment, status FROM diagnose WHERE MID='$MID'");
-	if ($result->num_rows > 0) {
-		while($row = $result->fetch_assoc()) {
-				//Patient Details
-		    $comment = $row['Comment']; 
-		    $colorCode = $row['status'];
-		   
+	try{
+		if ($result->num_rows > 0) {
+			while($row = $result->fetch_assoc()) {
+					//Patient Details
+				$comment = $row['Comment']; 
+				$colorCode = $row['status'];
+			}
 		}
+	}catch(Exception $e){
 	}
 	
 
