@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/FontAwesome/css/font-awesome.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/icon54-v4/style.css">
   <link rel="stylesheet" href="assets/tether/tether.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
@@ -23,8 +24,8 @@
   <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.css">
   <link rel="stylesheet" href="assets/formstyler/jquery.formstyler.theme.css">
   <link rel="stylesheet" href="assets/datepicker/jquery.datetimepicker.min.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="stylesheet" href="assets/recaptcha.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
@@ -172,31 +173,61 @@
                         <h3 class="form_title mbr-fonts-style display-5">
                             <strong>Sign Up</strong>
                         </h3>
-                        <div class="mbr-form" data-form-type="formoid">
+                        <div class="mbr-form">
 <!--Formbuilder Form-->
-<form action="https://mobirise.eu/" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="SignUp"><input type="hidden" name="email" data-form-email="true" value="1zIQw71XHl3Qqrwe7g0COfeev3zVt20KXSdgl54l0zsA7JV14z1lHvN7mIVOPvbAgxhVSg0E54LNlAVq9Qk/3CDygKtdlyUZBmm+WjVGflgJsEWUkTbX2wJQ/7aW6Six.XUnJG+j5bkeUjxyI7jtvG/hhkH/i263SAlT7leBz7yE7wFus6gnHkrFoJl8Lq1vd/LMgamd+5O5H89V1HYl4mwD5hGNy+A1Nvh9efaL2EF1pmyzJWaP7F5LwW/b6/34x">
+<form action="./access/dbClass.php" method="POST" class="mbr-form form-with-styler mx-auto">
 <div class="">
-<div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+
 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
 </div>
 <div class="dragArea">
 <div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="name">
-<input type="text" name="name" placeholder="Name" data-form-field="name" class="form-control display-7" value="" id="name-form3-w">
+<label for="name-form3-w" class="form-control-label mbr-fonts-style display-7">Name</label>
+<input type="text" name="name" placeholder="Nimesh Ekanayake" data-form-field="name" required="required" class="form-control display-7" value="" id="name-form3-w">
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 form-group" data-for="email">
-<input type="email" name="email" placeholder="Email Address" data-form-field="email" class="form-control display-7" value="" id="email-form3-w">
+<div class="col form-group" data-for="contactnumber">
+<label for="contactnumber-form3-w" class="form-control-label mbr-fonts-style display-7">Contact Number</label>
+<input type="text" name="contactnumber" placeholder="0712345678" data-form-field="contactnumber" required="required" class="form-control display-7" value="" id="contactnumber-form3-w">
+</div>
+<div data-for="bloodgroup" class="col form-group">
+<label for="bloodgroup-form3-w" class="form-control-label mbr-fonts-style display-7">Blood Group</label>
+<select name="bloodgroup" data-form-field="bloodgroup" class="form-control display-7" id="bloodgroup-form3-w">
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>
+</div>
+<div data-for="hometown" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label for="hometown-form3-w" class="form-control-label mbr-fonts-style display-7">Hometown</label>
+<input type="text" name="hometown" placeholder="Colombo" data-form-field="hometown" class="form-control display-7" required="required" value="" id="hometown-form3-w">
+</div>
+<div data-for="mohoffice" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label for="mohoffice-form3-w" class="form-control-label mbr-fonts-style display-7">MOH Office</label>
+<select name="mohoffice" data-form-field="mohoffice" class="form-control display-7" id="mohoffice-form3-w">
+<option value="Colombo">Colombo</option>
+<option value="Homagama">Homagama</option>
+<option value="Negombo">Negombo</option>
+</select>
 </div>
 <div data-for="nic" class="col-lg-12 col-md-12 col-sm-12 form-group">
-<input type="text" name="nic" placeholder="NIC" data-form-field="nic" class="form-control display-7" value="" id="nic-form3-w">
+<label for="nic-form3-w" class="form-control-label mbr-fonts-style display-7">NIC Number</label>
+<input type="text" name="nic" placeholder="922120700v" data-form-field="nic" required="required" class="form-control display-7" value="" id="nic-form3-w">
 </div>
-<div data-for="password" class="col-auto form-group">
-<input type="password" name="password" placeholder="Password" data-form-field="password" class="form-control display-7" required="required" value="" id="password-form3-w">
+<div class="col-auto form-group" data-for="password">
+<label for="password-form3-w" class="form-control-label mbr-fonts-style display-7">Password</label>
+<input type="password" name="password" placeholder="**********" data-form-field="password" required="required" class="form-control display-7" value="" id="password-form3-w">
 </div>
-<div data-for="confirmpassword" class="col-lg-12 col-md-12 col-sm-12 form-group">
-<input type="password" name="confirmpassword" placeholder="Confirm Password" data-form-field="confirmpassword" class="form-control display-7" required="required" value="" id="confirmpassword-form3-w">
+<div data-for="confpassword" class="col-lg-12 col-md-12 col-sm-12 form-group">
+<label for="confpassword-form3-w" class="form-control-label mbr-fonts-style display-7">Confirm Password</label>
+<input type="password" name="confpassword" placeholder="**********" data-form-field="confpassword" required="required" class="form-control display-7" value="" id="confpassword-form3-w">
 </div>
 <div class="col-auto col-lg-4 col-sm-6 mbr-section-btn align-center">
-<button type="submit" class="btn btn-sm btn-primary display-4">Sign Up</button>
+<button type="submit" class="btn btn-sm btn-primary display-4" name="signup">Sign Up</button>
 </div>
 </div>
 </form><!--Formbuilder Form-->
@@ -208,117 +239,107 @@
     </div>
 </section>
 
-<section class="footer1 cid-sH161XC2eM" id="footer1-x">
-
+<section class="footer2 solutionm4_footer2 cid-sH5P2k12HK" once="footers" id="footer2-16">
     
-
     
     <div class="container">
-        <div class="media-container-row content text-white">
-
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">
-                    ABOUT US</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
+        <div class="row align-left">
+            <div class="col-md-6 col-lg-3">
+                <h3 class="title pb-2 align-left mbr-bold mbr-fonts-style display-2">SolutionM4</h3>
+                <p class="mbr-text align-left mbr-white mbr-regular mbr-fonts-style display-7">© Copyright 2021 HELLXI IT - All Rights Reserved<br></p>
+                <div class="socicon-wrap">
+                    <span class="mbr-iconfont socicon-twitter socicon"></span>
+                    <span class="mbr-iconfont socicon-instagram socicon"></span>
+                    <span class="mbr-iconfont socicon-youtube socicon"></span>
+                    <span class="mbr-iconfont socicon-instagram socicon"></span>
                 </div>
-                <p class="mbr-text mbr-normal mbr-fonts-style display-4">
-                    Contrary to popular belief, Lorem simply random text. It has roots in a piece of classical Latin
-                    literature.</p>
-                <div class="item">
-                    <div class="card-img"><span class="mbr-iconfont img1 mobi-mbri-map-pin mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="item-title align-left mbr-fonts-style display-4">Address: 7654 Street Name</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card-img"><span class="mbr-iconfont img1 mdi-communication-phone"></span></div>
-                    <div class="card-box">
-                        <h4 class="item-title align-left mbr-fonts-style display-4">Phone: +(999) 5554432</h4>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="card-img"><span class="mbr-iconfont img1 mobi-mbri-letter mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="item-title align-left mbr-fonts-style display-4">
-                            Email: ex@yourmail.com</h4>
-                    </div>
-                </div>
-                
-                
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">Internal Login</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
-                </div>
-
-                <div class="link">
-                    <div class="card-img"><span class="mbr-iconfont img2 mobi-mbri-arrow-next mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="link-title align-left mbr-fonts-style display-4">Doctor</h4>
-                    </div>
-                </div>
-                <div class="link">
-                    <div class="card-img"><span class="mbr-iconfont img2 mobi-mbri-arrow-next mobi-mbri"></span></div>
-                    <div class="card-box">
-                        <h4 class="link-title align-left mbr-fonts-style display-4">Administration</h4>
-                    </div>
-                </div>
-                <div class="link">
-                    <div class="card-img"><span class="mbr-iconfont img2 mobi-mbri-arrow-next mobi-mbri"></span>
-                    </div>
-                    <div class="card-box">
-                        <h4 class="link-title align-left mbr-fonts-style display-4">Security Services</h4>
-                    </div>
-                </div>
-
-                
-
-                
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">
-                    LATEST POSTS</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
-                </div>
-                <div class="list">
-                    <div class="list-item d-flex">
-                        <img class="tips" src="assets/images/01.jpg" alt="">
-                        <div class="content d-flex flex-column justify-content-center">
-                            <h4 class="link-wrap mbr-fonts-style display-4">HEALTHCARE ALLIANCE</h4>
-                            <h4 class="date-wrap mbr-fonts-style display-4">Marhc 25, 2025</h4>
+            <div class="col-md-6 col-lg-3">
+                <div class="align-wrap">
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">
+                                Home<br></p>
                         </div>
                     </div>
-                    <div class="list-item d-flex">
-                        <img class="tips" src="assets/images/02.jpg" alt="">
-                        <div class="content d-flex flex-column justify-content-center">
-                            <h4 class="link-wrap mbr-fonts-style display-4">FIND CLINIC</h4><h4 class="date-wrap mbr-fonts-style display-4">March 21, 2025
-                                </h4>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Products</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Services</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Pricing</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Help</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <h5 class="align-left widget-title mbr-semibold mbr-fonts-style display-7">
-                    OPENING HOURS</h5>
-                <div class="line-wrap align-left">
-                    <div class="line"></div>
+            <div class="col-md-6 col-lg-3">
+                <div class="align-wrap">
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">
+                                Ideas &amp; Plans<br></p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Prompt Strategies</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Content Composing</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Design &amp; Development</p>
+                        </div>
+                    </div>
+                    <div class="item-wrap">
+                        <div class="icons-wrap pb-2">
+                            <p class="icon-title mbr-regular mbr-fonts-style display-7">Creative Direction</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="box-list mbr-fonts-style display-4">
+            </div>
+            <div class="col-md-6 align-center col-lg-3">
+
+                <div class="list-items pb-4">
+                    <div class="item mbr-flex">
+                        <span class="item-icon mobi-mbri-phone mobi-mbri"></span>
+                        <p class="item-text mbr-regular mbr-white mbr-fonts-style display-7">+213 632 435</p>
+                    </div>
+
+                    <div class="item mbr-flex">
+                        <span class="item-icon mobi-mbri-letter mobi-mbri"></span>
+                        <p class="item-text mbr-regular mbr-white mbr-fonts-style display-7"> info@yoursite.com</p>
+
+                    </div>
+
+                    <div class="item mbr-flex">
+                        <span class="item-icon mobi-mbri-map-pin mobi-mbri"></span>
+                        <p class="item-text mbr-regular mbr-white mbr-fonts-style display-7">Office 3, Street 54</p>
+
+                    </div>
+
                     
+
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                <li class="clearfix">Mon - Tue<span>11.10 - 19.10</span></li><li class="clearfix">Wed - Thur<span>09.40 - 16.40</span></li><li class="clearfix">Fri - Sat<span>11.20 - 20.20</span></li><li class="clearfix">Sat-Sun<span>10.00 - 12.30</span></li></div>
+                </div>
+                <div class="mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="internallogin.html#features04-1c"><span class="icon54-v4-login mbr-iconfont mbr-iconfont-btn"></span>INTERNAL LOGIN</a></div>
             </div>
         </div>
     </div>
@@ -356,7 +377,6 @@
   <script src="assets/formstyler/jquery.formstyler.min.js"></script>
   <script src="assets/datepicker/jquery.datetimepicker.full.js"></script>
   <script src="assets/theme/js/script.js"></script>
-  <script src="assets/formoid.min.js"></script>
   
   
   
