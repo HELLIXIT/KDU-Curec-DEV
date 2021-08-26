@@ -1,5 +1,5 @@
 <?php
-include('../dbConn.php');
+include('../../../d_b_connect.php');
 
 
 if(isset($_POST['view'])){
