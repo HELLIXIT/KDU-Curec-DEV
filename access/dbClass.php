@@ -181,6 +181,7 @@
 				echo $myJSON;
 				if(mysqli_query($conn,$sql)){
 					$_SESSION["sessionId"] = $sessionId;
+					$_SESSION["RID"] = $RID;
 					$_SESSION["token1"] = $token1;
 					$_SESSION["priority"] = $priority;
 					

@@ -3,6 +3,12 @@
 	$username = "edvicon_curecadmin";
 	$password = "KDUcurec34";
 	$database = "edvicon_curec";*/
+	
+	/*$servername = "curec.life";*/
+  /*$servername = "localhost";
+  $username = "edvicon_curecadmin";
+  $password = "KDUcurec34";
+  $database = "edvicon_curec";*/
 
   /*$servername = "curec.life";*/
   $servername = "localhost";
