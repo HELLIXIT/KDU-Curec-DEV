@@ -19,7 +19,7 @@
 
 	if($_SESSION["mid"] != ""){
 		$MID = $_SESSION["mid"];
-		//$recordId = $_SESSION["RID"];
+		$recordId = $_SESSION["RID"];
 		$sessionId = $_SESSION["sessionId"];
         $token = $_SESSION["token1"];
         echo "
@@ -27,6 +27,7 @@
 		<script type='text/javascript'>var token = '$token';</script>";
 	}else{
 		$MID = "";
+		$recordId = "";
 		$sessionId = "";
         $token = "";
         $recordId="";
@@ -41,7 +42,7 @@
 	$_SESSION["MID"] = $MID;
 	$_SESSION["SID"] = $sessionId;
 	$_SESSION["TID"] = $token;
-	//$_SESSION["RID"] = $recordId;
+	$_SESSION["RID"] = $recordId;
 
 ?>
 <head>
@@ -180,19 +181,20 @@
 
 					<div class="col-md-12 animate-box">
 						<div class="row">
-							<div class="col-md-8">
+							<div>
 
 								<!-- <div class="embed-responsive embed-responsive-16by9">
 									<iframe class="embed-responsive-item"
 										src="https://www.youtube.com/watch?v=s8TZvdiekAk"></iframe>
 								</div> -->
 
-								<div style="height: 800px">
-									<div id='videos' >
+								<div style="height: 800px; width: 100%">
+									<div id='videos' controls>
 								        <div id='subscriber'></div>
 								        <div id='publisher'></div>
 								    </div>
 									<script type='text/javascript' src='js/app.js'></script>
+									<script type='text/javascript' src='js/config.js'></script>
 								</div>
 
 								<!-- <div id='videos' style="width: 100%">
@@ -214,17 +216,17 @@
 						<div class="row">
 							<form method="POST" action="submit.php">
 								<div class="row">
-									<button type="submit" id="btnNextPat" name="btnNextPat" class="btn btn-success btn-lg" style="width: 45%">Next Patient</button>
-									<button type="submit" id="btnFinish" name="btnFinish" class="btn btn-primary btn-lg" style="width: 45%">Finish & Exit</button>
+									<button type="submit" id="btnEnd" name="btnEnd" class="btn btn-warning btn-lg" style="width: 100%; background-color:red">End Session</button>
 								</div>
 							</form>		
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
 
-
+		<br><br>
 		<footer id="colorlib-footer" role="contentinfo">
 			<div class="overlay"></div>
 
