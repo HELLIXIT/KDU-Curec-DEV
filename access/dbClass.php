@@ -150,11 +150,11 @@
 			$lungdisease=$_POST['lungdisease'];
 			$otherdiseases=$_POST['otherdiseases'];
 			
-			$calldoctor = true;
+			
 			$MID = $_SESSION["mid"];
 			$SID = 0;
 			$RID = "";
-			$priority = 0;
+			$priority = 1;
 			
 			$sql = "INSERT INTO record(MID, SID, fever, cough, soreThroat, difficultBreathe, bodyArchPain, cold, lossOfSmell, diarrhoea, urineOutput, ArriveFromAbroad, dateifYes, contactSuspect, personAbroad, personHighrisk, personQuarantine, personWorkQuarantine, heartDiseace, bloodPressure, Diabetes, LungDisease, OtherDisease, priority) VALUES ('$MID','$SID','$fever','$cough','$sorethroat','$difficultyinbreathing','$bodyaches','$cold','$lossofsmell','$diarrhoea','$urineoutput','$travelabroad',$traveldate,'$covid19patient', '$comefromabroad','$livinginriskarea','$directedquarantinecamp','$employedinquarantinecamp','$heartdisease','$bloodpressure','$diabetes','$lungdisease', '$otherdiseases', '$priority')";
 			if(mysqli_query($conn,$sql)){
@@ -163,6 +163,151 @@
 				$error = mysqli_error($conn);
 				header('location: ../selfassesment.html');
 			}
+			
+			//priority algo - begin
+			$totpoints = 0;
+			
+			//Level 1
+			if($difficultyinbreathing=='Yes')
+				{$totpoints = $totpoints + 10}
+		
+			if($fever=='Yes' || $lossofsmell=='Yes' || $urineoutput=='Reduced')
+				{$totpoints = $totpoints + 5}
+			
+			if($sorethroat=='Yes' || $cough=='Yes')
+				{$totpoints = $totpoints + 2}
+			
+			if($bodyaches=='Yes')
+				{$totpoints = $totpoints + 1}
+			
+			//Level 2
+			if($travelabroad=='Yes' || $covid19patient=='Yes' || $directedquarantinecamp=='Yes')
+				{$totpoints = $totpoints + 10}
+			
+			if($employedinquarantinecamp=='Yes' || $livinginriskarea=='Yes' || $comefromabroad=='Yes')
+				{$totpoints = $totpoints + 5}	
+			
+			//Level 3
+			if($heartdisease=='Yes' || $bloodpressure=='Yes' || $diabetes=='Yes' || $lungdisease=='Yes' || $otherdiseases=='Yes')
+				{$totpoints = $totpoints + 10}
+			
+			
+			//Assess
+			if ($totpoints > 30) {
+				$priority = "4";
+			} else if ($totpoints > 20) {
+				$priority = "3";
+			} else if ($totpoints > 10) {
+				$priority = "2";
+			} else {
+				$priority = "1";
+			}
+			
+			//Posting dada for sessions if patient needed to call
+			$_SESSION["fever"] = $fever;
+			$_SESSION["cough"] = $cough;
+			$_SESSION["sorethroat"] = $sorethroat;
+			$_SESSION["cold"] = $cold;
+			$_SESSION["difficultyinbreathing"] = $difficultyinbreathing;
+			$_SESSION["bodyaches"] = $bodyaches;
+			$_SESSION["lossofsmell"] = $lossofsmell;
+			$_SESSION["diarrhoea"] = $diarrhoea;
+			$_SESSION["urineoutput"] = $urineoutput;
+			
+			$_SESSION["travelabroad"] = $travelabroad;
+			$_SESSION["traveldate"] = $traveldate;
+			$_SESSION["covid19patient"] = $covid19patient;
+			$_SESSION["comefromabroad"] = $comefromabroad;
+			$_SESSION["livinginriskarea"] = $livinginriskarea;
+			$_SESSION["directedquarantinecamp"] = $directedquarantinecamp;
+			$_SESSION["employedinquarantinecamp"] = $employedinquarantinecamp;
+			
+			$_SESSION["heartdisease"] = $heartdisease;
+			$_SESSION["bloodpressure"] = $bloodpressure;
+			$_SESSION["diabetes"] = $diabetes;
+			$_SESSION["lungdisease"] = $lungdisease;
+			$_SESSION["otherdiseases"] = $otherdiseases;
+			
+			$_SESSION["RID"] = $RID;
+			$_SESSION["priority"] = $priority;
+			
+			//priority algo - end
+			
+			header('location: ./patient/system/results.php');
+			
+			//Moved to allow patient to select call doctor or not
+			/*$calldoctor = true;
+			if(isset($calldoctor)){
+
+				$session = $opentok->createSession();
+				$sessionId = $session->getSessionId();
+				$token1 = $opentok->generateToken($sessionId);
+				$token2 = $opentok->generateToken($sessionId);
+
+				$myObj = new \stdClass();
+				$myObj->SessionId = $sessionId;
+				$myObj->TokenId1 = $token1;
+
+				$myJSON = json_encode($myObj);
+				
+				$sql = "INSERT INTO priority_queue(RID, priority, status, sessionId, docToken) VALUES ('$RID','$priority',1,'$sessionId','$token2')";
+				echo $myJSON;
+				if(mysqli_query($conn,$sql)){
+					$_SESSION["sessionId"] = $sessionId;
+					$_SESSION["RID"] = $RID;
+					$_SESSION["token1"] = $token1;
+					$_SESSION["priority"] = $priority;
+					
+					header('location: ./patient/system/contact.php');
+				}else{
+					$error = mysqli_error($conn);
+					header('location: ../selfassesment.html');
+				}
+			}*/
+			
+			
+		}
+	}catch(Exception $e){
+		header('location: ../signin.html');
+	}
+	
+	
+	try{
+		if(isset($_POST['calldoctor']))
+		{
+			session_start();
+			
+			$fever=$_SESSION["fever"];
+			$cough=$_SESSION["cough"];
+			$sorethroat=$_SESSION["sorethroat"];
+			$cold=$_SESSION["cold"];
+			$difficultyinbreathing=$_SESSION["difficultyinbreathing"];
+			$bodyaches=$_SESSION["bodyaches"];
+			$lossofsmell=$_SESSION["lossofsmell"];
+			$diarrhoea=$_SESSION["diarrhoea"];
+			$urineoutput=$_SESSION["urineoutput"];
+			
+			$travelabroad=$_SESSION["travelabroad"];
+			$traveldate=$_SESSION["traveldate"];
+			$covid19patient=$_SESSION["covid19patient"];
+			$comefromabroad=$_SESSION["comefromabroad"];
+			$livinginriskarea=$_SESSION["livinginriskarea"];
+			$directedquarantinecamp=$_SESSION["directedquarantinecamp"];
+			$employedinquarantinecamp=$_SESSION["employedinquarantinecamp"];
+			
+			$heartdisease=$_SESSION["heartdisease"];
+			$bloodpressure=$_SESSION["bloodpressure"];
+			$diabetes=$_SESSION["diabetes"];
+			$lungdisease=$_SESSION["lungdisease"];
+			$otherdiseases=$_SESSION["otherdiseases"];
+			
+			$calldoctor = false;
+			$MID = $_SESSION["mid"];
+			$SID = 0;
+			$RID = $_SESSION["RID"];
+			$priority = $_SESSION["priority"];
+			
+			$calldoctor = true;
 			
 			if(isset($calldoctor)){
 
@@ -190,9 +335,6 @@
 					$error = mysqli_error($conn);
 					header('location: ../selfassesment.html');
 				}
-	
-				
-
 			}
 			
 			
@@ -200,4 +342,5 @@
 	}catch(Exception $e){
 		header('location: ../signin.html');
 	}
+	
 ?>
