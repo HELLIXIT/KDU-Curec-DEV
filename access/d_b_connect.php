@@ -5,16 +5,17 @@
 	$database = "edvicon_curec";*/
 	
 	/*$servername = "curec.life";*/
-  /*$servername = "localhost";
-  $username = "edvicon_curecadmin";
-  $password = "KDUcurec34";
-  $database = "edvicon_curec";*/
-
-  /*$servername = "curec.life";*/
   $servername = "localhost";
   $username = "edvicon_curecadmin";
   $password = "KDUcurec34";
   $database = "edvicon_curec";
+
+  /*$servername = "curec.life";*/
+  /*$servername = "localhost";
+  $username = "root";
+  $password = "";
+  $database = "curec";*/
+
 	if(mysqli_connect($servername, $username, $password, $database))
 	{
 		$conn = mysqli_connect($servername, $username, $password, $database);

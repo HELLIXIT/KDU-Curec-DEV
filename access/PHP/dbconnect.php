@@ -1,9 +1,9 @@
 <?php 
 	class DbConnect {
 		private $host = 'localhost';
-		private $dbName = 'curec';
-		private $user = 'root';
-		private $pass = '';
+		private $dbName = 'edvicon_curec';
+		private $user = 'edvicon_curecadmin';
+		private $pass = 'KDUcurec34';
 
 		public function connect() {
 			try {
