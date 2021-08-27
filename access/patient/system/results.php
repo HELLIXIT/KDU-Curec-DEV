@@ -119,62 +119,71 @@ include 'logincheck.php';
             </div>
         </div>
     </nav>
-    <br>
 
-    <div id="colorlib-services">
-        <div class="container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="services-flex">
-
-                            <div class="one-fifth animate-box">
-                                <div class="services">
-                                    <center><span class="icon">
-												<i class="large material-icons">video_call</i>
-											</span></center>
-                                    <div class="desc">
-                                        <center>
-                                            <h3><a href="contact.php#start"> <b>Self-Diagnosis</b> </a></h3>
-                                            <h5> Click Here to Start </h5>
-
-                                            <a href="../../../selfassesment.html">
-                                                <button class="label label-pill label-danger count"
-                                                        style="width: 50%; height: 40%;">Start
-                                                </button>
-                                            </a>
-
-                                        </center>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="one-fifth animate-box">
-                                <div class="services">
-                                    <center><span class="icon">
-												<i class="large material-icons">video_call</i>
-											</span></center>
-                                    <div class="desc">
-                                        <center>
-                                            <h3><a href="contact.php#start"> <b>Self-Diagnosis</b> </a></h3>
-                                            <h5> Click Here to Start </h5>
-
-                                            <a href="../../../selfassesment.html">
-                                                <button class="label label-pill label-danger count"
-                                                        style="width: 50%; height: 40%;">Start
-                                                </button>
-                                            </a>
-                                        </center>
-                                    </div>
+    <aside id="colorlib-hero" class="breadcrumbs">
+        <div class="flexslider">
+            <ul class="slides">
+                <li style="background-image: url(images/img_bg_6.jpg);">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+                                <div class="slider-text-inner">
+                                    <h1>Your Status is <strong>Status</strong></h1>
+                                    <h2>Instructions text here</h2>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+    <div class="colorlib-doctor">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 animate-box">
+                    <div class="row row-pb-lg">
+                        <div class="owl-carousel2">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center"></div>
+
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
+                            <div class="doctor" style="background-color:#FFE6B3;">
+                                <form method="post" action="">
+                                    <div class="desc">
+                                        <span style="color:red">Done Checking?</span>
+                                        <button type="submit" name="your_name" value="your_value" class="btn-link"><h3>
+                                                Back To Dashboard</h3></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
+                            <div class="doctor" style="background-color:#B3FFCC; ">
+                                <form method="post" action="">
+                                    <div class="desc">
+                                        <span style="color:red">Face to Face Video Call</span>
+                                        <button type="submit" name="your_name" value="your_value" class="btn-link"><h3>
+                                                Proceed to Video Call</h3></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center"></div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center"></div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center"></div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center"></div>
+                        <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div id="colorlib-services">
         <footer id="colorlib-footer" role="contentinfo">
@@ -244,7 +253,6 @@ include 'logincheck.php';
         }
 
         load_unseen_notification();
-
 
         setInterval(function () {
             load_unseen_notification();
