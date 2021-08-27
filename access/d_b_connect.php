@@ -15,6 +15,7 @@
   $username = "root";
   $password = "";
   $database = "curec";*/
+
 	if(mysqli_connect($servername, $username, $password, $database))
 	{
 		$conn = mysqli_connect($servername, $username, $password, $database);
