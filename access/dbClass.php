@@ -169,27 +169,27 @@
 			
 			//Level 1
 			if($difficultyinbreathing=='Yes')
-				{$totpoints = $totpoints + 10}
+				{$totpoints = $totpoints + 10;}
 		
 			if($fever=='Yes' || $lossofsmell=='Yes' || $urineoutput=='Reduced')
-				{$totpoints = $totpoints + 5}
+				{$totpoints = $totpoints + 5;}
 			
 			if($sorethroat=='Yes' || $cough=='Yes')
-				{$totpoints = $totpoints + 2}
+				{$totpoints = $totpoints + 2;}
 			
 			if($bodyaches=='Yes')
-				{$totpoints = $totpoints + 1}
+				{$totpoints = $totpoints + 1;}
 			
 			//Level 2
 			if($travelabroad=='Yes' || $covid19patient=='Yes' || $directedquarantinecamp=='Yes')
-				{$totpoints = $totpoints + 10}
+				{$totpoints = $totpoints + 10;}
 			
 			if($employedinquarantinecamp=='Yes' || $livinginriskarea=='Yes' || $comefromabroad=='Yes')
-				{$totpoints = $totpoints + 5}	
+				{$totpoints = $totpoints + 5;}	
 			
 			//Level 3
 			if($heartdisease=='Yes' || $bloodpressure=='Yes' || $diabetes=='Yes' || $lungdisease=='Yes' || $otherdiseases=='Yes')
-				{$totpoints = $totpoints + 10}
+				{$totpoints = $totpoints + 10;}
 			
 			
 			//Assess

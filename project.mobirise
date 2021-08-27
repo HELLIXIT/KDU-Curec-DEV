@@ -51,6 +51,8 @@
     "sitemapSwitcherAuto": "on",
     "siteUrl": "https://www.curec.life",
     "pwa-switcher": true,
+    "publishType": "local",
+    "publishPath": "@PROJECT_PATH@",
     "robotsText": "User-agent: *\nDisallow: /cgi-bin\n",
     "PWA": {
       "enabled": true,
