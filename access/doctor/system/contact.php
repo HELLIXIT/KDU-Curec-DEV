@@ -470,20 +470,17 @@
 											<th scope="row">Other Diseases</th>
 											<td class="text-success"><?php echo $otherDis; ?></td>
 										</tr>
+                                        <tr>
+                                            <th scope="row">Vaccination Status</th>
+                                            <td class="text-success">FZ-1</td>
+                                        </tr>
 									</tbody>
 								</table>
-
 							</div>
 
 
 							</div>
 							<div class="col-md-8">
-
-								<!-- <div class="embed-responsive embed-responsive-16by9">
-									<iframe class="embed-responsive-item"
-										src="https://www.youtube.com/watch?v=s8TZvdiekAk"></iframe>
-								</div> -->
-
 								<div style="height: 800px">
 									<div id='videos' >
 								        <div id='subscriber'></div>
@@ -491,14 +488,6 @@
 								    </div>
 									<script type='text/javascript' src='js/app.js'></script>
 								</div>
-
-								<!-- <div id='videos' style="width: 100%">
-							        <div id='subscriber'></div>
-							        <div id='publisher'></div>
-							    </div>
-								<script type='text/javascript' src='js/app.js'></script> -->
-
-
 							</div>
 						</div>
 						<hr>

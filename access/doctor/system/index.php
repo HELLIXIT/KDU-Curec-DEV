@@ -116,31 +116,6 @@ include 'logincheck.php';
 						</div>
 					</div>
 				</div>
-				<!-- <div class="menu-wrap">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-8">
-								<div class="menu-1">
-									<ul>
-										<li class="active"><a href="index.php">Home</a></li>
-										<li class="has-dropdown">
-											<a href="doctors.php">Doctors</a>
-										</li>
-										<li class="has-dropdown">
-											<a href="departments.php">Hospitals</a>
-										</li>
-										<li class="has-dropdown">
-											<a href="./doctor/">Doctor Login</a>
-										</li>
-										<li class="has-dropdown">
-											<a href="./admin/">Admin Login</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
 		</nav>
 
@@ -194,12 +169,8 @@ include 'logincheck.php';
 										</div>
 									</div>
 								</div>
-
-
-
 							</div>
 							<div class="services-no-flex">
-
 							</div>
 						</div>
 					</div>
