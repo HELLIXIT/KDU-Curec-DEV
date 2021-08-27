@@ -14,7 +14,39 @@
 </script>
 <html>
 <?php
-include 'logincheck.php';
+	$priority = 0;
+	$status = "";
+	$instructions = "";
+	$fontcolor = "";
+	
+	include 'logincheck.php';
+	if($priority = $_SESSION["priority"]){
+		
+		if ($priority == "4") {
+			$status = "The risk of COVID-19 is Severe";	
+			$instructions = "Do not panic, isolate yourself from friends and family. Your Doctor will contact you immediately.";
+			$fontcolor = "red";
+		} else if ($priority == "3") {
+			$status = "The risk of COVID-19 is High";		
+			$instructions = "Do not panic, isolate yourself from friends and family. Your Doctor will contact you immediately.";
+			$fontcolor = "darkblue";	
+		} else if ($priority == "2") {
+			$status = "The risk of COVID-19 is Medium";		
+			$instructions = "Drink water regularly and observe personal good hygiene. Pay attention to your health and redo the test after two days.";
+			$fontcolor = "orange";	
+		} else {
+			$status = "The risk of COVID-19 is Low";	
+			$instructions = "Take care of yourself.";
+			$fontcolor = "green";			
+		}
+			
+	}else{
+		header('location: ../../../selfassesment.html');
+	}
+	
+
+	
+	
 ?>
 <head>
     <meta charset="utf-8">
@@ -127,10 +159,10 @@ include 'logincheck.php';
                     <div class="overlay"></div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-md-pull-2 slider-text">
+                            <div class="col-md-12 col-md-offset-2 col-md-pull-2 slider-text">
                                 <div class="slider-text-inner">
-                                    <h1>Your Status is <strong>Status</strong></h1>
-                                    <h2>Instructions text here</h2>
+                                    <h1>Your status: <font color="<?php echo $fontcolor; ?>"><b><?php echo $status; ?></b></font> </h1>
+                                    <h2><?php echo $instructions; ?></h2>
                                 </div>
                             </div>
                         </div>
@@ -154,10 +186,10 @@ include 'logincheck.php';
 
                         <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
                             <div class="doctor" style="background-color:#FFE6B3;">
-                                <form method="post" action="">
+                                <form method="post" action="./unsetassessessions.php">
                                     <div class="desc">
                                         <span style="color:red">Done Checking?</span>
-                                        <button type="submit" name="your_name" value="your_value" class="btn-link"><h3>
+                                        <button type="submit" name="unset" value="unset" class="btn-link"><h3>
                                                 Back To Dashboard</h3></button>
                                     </div>
                                 </form>
@@ -165,10 +197,10 @@ include 'logincheck.php';
                         </div>
                         <div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
                             <div class="doctor" style="background-color:#B3FFCC; ">
-                                <form method="post" action="">
+                                <form method="post" action="../../dbClass.php">
                                     <div class="desc">
                                         <span style="color:red">Face to Face Video Call</span>
-                                        <button type="submit" name="your_name" value="your_value" class="btn-link"><h3>
+                                        <button type="submit" name="calldoctor" value="calldoctor" class="btn-link"><h3>
                                                 Proceed to Video Call</h3></button>
                                     </div>
                                 </form>
